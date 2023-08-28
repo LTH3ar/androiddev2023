@@ -6,4 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".WeatherActivity">
 
+    <!--line divider at the center of the screen-->
+    <View
+        android:id="@+id/line_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--fragment container top (top half of the screen)-->
+    <FrameLayout
+        android:id="@+id/fragment_container_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/line_divider"
+        app:layout_constraintTop_toTopOf="parent" >
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/staticText"
+            android:text="Status: "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dynamicText"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_gravity="top|end"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            />
+-->
+        <!--image start at bottom limit at below status text-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="bottom|center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            />
+    </FrameLayout>
+
+
+    <!--fragment container bottom (bottom half of the screen)-->
+    <FrameLayout
+        android:id="@+id/fragment_container_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_divider" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
