@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import vn.edu.usth.weather.R;
 
@@ -47,6 +48,7 @@ public class DetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
         Bundle args = getArguments();
+
         if (args != null) {
             day = args.getString("day");
             status = args.getString("status");
