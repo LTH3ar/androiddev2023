@@ -1,20 +1,21 @@
 package vn.edu.usth.weather;
 
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+import vn.edu.usth.weather.ui.ForecastFragment;
 
+
+public class WeatherActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_weather);
+        Log.i("onCreate", "onCreate");
     }
 
     @Override
