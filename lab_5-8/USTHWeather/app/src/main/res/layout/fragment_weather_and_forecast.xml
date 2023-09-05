@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ForecastFragment"
-    >
-    
+    android:orientation="vertical"
+    tools:context=".ui.WeatherAndForecastFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12C"
+            android:id="@+id/temperature"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cloudy"
+            android:id="@+id/condition"
+            android:layout_below="@id/temperature"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hanoi"
+            android:id="@+id/location"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cloudy"
+            android:id="@+id/icon"
+            android:layout_below="@id/condition"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:maxWidth="200dp"
+            android:maxHeight="200dp"
+            android:scaleType="fitCenter"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,293 +75,295 @@
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Mon"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical|center_horizontal"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
-    
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Tue"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
-    
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Wen"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
-    
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Thu"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
-    
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Fri"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
-    
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Sat"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
-    
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_marginBottom="7dp"
             >
-    
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="Sun"
                 android:gravity="center_vertical"
                 />
-    
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/weather_icons_cloudy"
                 android:gravity="center_vertical"
                 />
-    
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Cloudy"/>
-    
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="12C" />
-    
+
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+</LinearLayout>

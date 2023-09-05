@@ -10,16 +10,12 @@ import android.view.ViewGroup;
 
 import vn.edu.usth.weather.R;
 
-public class ForecastFragment extends Fragment {
-
-    //layout fragment_forecast.xml
-    public ForecastFragment() {
-        // Required empty public constructor
-    }
+public class WeatherAndForecastFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_forecast, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_weather_and_forecast, container, false);
     }
 }
