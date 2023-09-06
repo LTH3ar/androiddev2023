@@ -12,6 +12,9 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
 import vn.edu.usth.weather.R;
 
 public class HomeFragmentPagerAdapter extends Fragment {
@@ -46,6 +49,15 @@ public class HomeFragmentPagerAdapter extends Fragment {
         viewPager.setAdapter(pagerAdapter);
 
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        TabLayout tabLayout = view.findViewById(R.id.tab_layout);
+        tabLayout.setTabTextColors(getResources().getColor(R.color.black), getResources().getColor(R.color.white));
+        new TabLayoutMediator(tabLayout, viewPager,
+                (tab, position) -> tab.setText("OBJECT " + (position + 1))
+        ).attach();
     }
 
     // Adapter class (you can define this as an inner class or in a separate file)
