@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo App</string>
+
+    <!--bottom navigation title-->
+    <string name="title_nav_home">Home</string>
+    <string name="title_nav_recent">Explore</string>
+    <string name="title_nav_category">Category</string>
+    <string name="title_nav_favorite">Favorite</string>
+</resources>
