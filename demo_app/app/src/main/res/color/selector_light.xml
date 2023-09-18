@@ -5,4 +5,5 @@
     <item android:state_selected="true" android:color="@color/BottomBarIconLightSelected" />
     <!-- When not selected, use selectorInactive -->
     <item android:color="@color/BottomBarIconLightUnselected" />
+
 </selector>
