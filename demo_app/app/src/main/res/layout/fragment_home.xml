@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentUI.HomeFragment"
@@ -9,10 +8,11 @@
     android:padding="16dp">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:padding="16dp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,139 +22,31 @@
 
             <!--TODO: Add top fragment Carousel with viewpager2-->
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPagerCarousel"
+                android:id="@+id/viewPager2"
                 android:layout_width="match_parent"
-                android:layout_height="202dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:clipToPadding="false"
-                android:overScrollMode="never"/>
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:background="@drawable/layout_bg_test"
+                android:foregroundGravity="center"
+                android:foreground="@drawable/layout_bg_test"/>
 
             <!--TODO: Add 3 scrollview oriented horizontally-->
 
-            <!-- Category Bar -->
-            <RelativeLayout
-                android:id="@+id/CategoryBar"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                android:layout_below="@+id/viewPagerCarousel">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_nav_category"
-                    style="@style/TextColorFont"
-                    android:textStyle="bold"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    />
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_next"
-                    android:background="?attr/selectableItemBackground"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    />
-            </RelativeLayout>
-
-            <!-- Category Scroll View -->
-            <HorizontalScrollView
+            <ScrollView
                 android:id="@+id/HscrollView1"
-                android:layout_below="@+id/CategoryBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPager2"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:scrollbars="horizontal">
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/CatImgView1"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/CatImgView2"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/CatImgView3"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/CatImgView4"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/CatImgView5"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/CatImgView6"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-            </HorizontalScrollView>
-
-
-            <HorizontalScrollView
+            <ScrollView
                 android:id="@+id/HscrollView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -163,149 +55,9 @@
                 android:layout_alignParentEnd="true"
                 android:padding="16dp"
                 android:orientation="horizontal"
-                android:scrollbars="horizontal">
+                android:scrollbars="horizontal"/>
 
-                <!-- 10 combine cardview and imageview -->
-                <!-- id format: RecImgView + 1-10, w:130 h:130 -->
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView1"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView2"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView3"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView4"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView5"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView6"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView7"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView8"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView9"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/RecImgView10"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
+            <ScrollView
                 android:id="@+id/HscrollView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -314,57 +66,7 @@
                 android:layout_alignParentEnd="true"
                 android:padding="16dp"
                 android:orientation="horizontal"
-                android:scrollbars="horizontal">
-
-                <!-- 3 combine cardview and imageview -->
-                <!-- id format: VidImgView + 1-3, w:130 h:130 -->
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/VidImgView1"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/VidImgView2"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="14dp">
-                        <ImageView
-                            android:id="@+id/VidImgView3"
-                            android:layout_width="148dp"
-                            android:layout_height="90dp"
-                            android:scaleType="centerCrop"
-                            android:layout_gravity="start|center_vertical"
-                            android:src="@drawable/test_image" />
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-
-            </HorizontalScrollView>
+                android:scrollbars="horizontal"/>
 
         </RelativeLayout>
 
